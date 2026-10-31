@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f96e2a">
+  <meta name="description" content="ریتم؛ انجمن علمی گرافیک. اینجا، ایده‌ها شکل می‌گیرن.">
+  <title>ریتم | انجمن علمی گرافیک</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+    :root{--orange:#f96e2a;--ink:#171717;--muted:#77736f;--paper:#f7f5f1;--line:#e8e3dc}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    .nav{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:25px;letter-spacing:-1px}
+    .mark{width:42px;height:42px;border:3px solid var(--orange);border-radius:14px;display:grid;place-items:center;color:var(--orange);font-weight:900;font-size:25px;transform:rotate(-8deg)}
+    .navlinks{display:flex;align-items:center;gap:28px;color:#5f5b56;font-size:14px}
+    .navlinks a:hover{color:var(--orange)}
+    .nav-cta{padding:11px 20px;border-radius:999px;background:var(--ink);color:white;font-size:13px}
+    .hero{min-height:660px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;padding:70px 0 80px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--orange);font-weight:700;font-size:13px;margin-bottom:22px}
+    .eyebrow:before{content:"";width:27px;height:2px;background:var(--orange)}
+    h1{font-size:clamp(64px,10vw,132px);line-height:.98;letter-spacing:-7px;margin:0 0 20px;font-weight:900}
+    h1 span{color:var(--orange)}
+    .tagline{font-size:clamp(20px,2.5vw,29px);font-weight:600;margin:0 0 13px}
+    .intro{color:var(--muted);font-size:16px;line-height:2.2;max-width:490px;margin:0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{border:0;cursor:pointer;border-radius:999px;padding:15px 24px;font:600 14px "Vazirmatn",sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.2s}
+    .btn-primary{background:var(--orange);color:white;box-shadow:0 10px 25px #f96e2a33}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 28px #f96e2a44}
+    .btn-outline{border:1px solid #d8d1c8;background:transparent}
+    .btn-outline:hover{border-color:var(--orange);color:var(--orange)}
+    .art{height:470px;position:relative;display:grid;place-items:center}
+    .orb{width:min(390px,80vw);aspect-ratio:1;border-radius:50%;background:var(--orange);position:relative;overflow:hidden}
+    .orb:before,.orb:after{content:"";position:absolute;border:1px solid #ffffff70;border-radius:50%;width:78%;height:78%;left:11%;top:11%}
+    .orb:after{width:54%;height:54%;left:23%;top:23%}
+    .orbit{position:absolute;width:470px;height:210px;border:1px solid #c9c0b5;border-radius:50%;transform:rotate(-35deg)}
+    .orbit.two{transform:rotate(48deg);width:450px;height:170px}
+    .glyph{position:absolute;color:#fff;font-size:180px;font-weight:900;line-height:1;transform:rotate(-12deg);text-shadow:9px 10px 0 #17171718}
+    .sticker{position:absolute;right:3%;bottom:7%;background:#fff;padding:15px 19px;border-radius:16px;box-shadow:0 12px 35px #00000012;font-size:13px;font-weight:700;transform:rotate(-7deg)}
+    .sticker b{display:block;color:var(--orange);font-size:20px}
+    .ticker{background:var(--ink);color:#fff;overflow:hidden;padding:17px 0;white-space:nowrap}
+    .ticker-track{display:flex;justify-content:space-around;gap:42px;font-size:13px;letter-spacing:1px}
+    .ticker span{color:var(--orange);font-size:20px;vertical-align:-2px;margin:0 10px}
+    section{padding:105px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+    .kicker{font-size:12px;color:var(--orange);font-weight:800;letter-spacing:1px}
+    h2{font-size:clamp(32px,5vw,54px);letter-spacing:-2px;margin:9px 0 0;line-height:1.3}
+    .section-desc{color:var(--muted);max-width:370px;line-height:2;font-size:14px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;min-height:220px;transition:.25s}
+    .card:hover{transform:translateY(-6px);border-color:#f4b08e}
+    .card-num{font-size:12px;color:var(--orange);font-weight:800}
+    .card h3{font-size:21px;margin:28px 0 10px}
+    .card p{font-size:13px;line-height:2;color:var(--muted);margin:0}
+    .quote{background:#eee9e1;border-radius:28px;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .quote strong{font-size:clamp(26px,4vw,43px);line-height:1.6;max-width:650px}
+    .quote-mark{font-size:100px;color:var(--orange);font-weight:900;line-height:.6}
+    .social{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+    .social-card{padding:30px;border-radius:22px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .social-card small{color:var(--muted);display:block;margin-top:5px}
+    .social-icon{width:48px;height:48px;border-radius:15px;background:#fff0e9;color:var(--orange);display:grid;place-items:center;font-size:23px;font-weight:900}
+    footer{padding:35px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}
+    .modal-backdrop{position:fixed;inset:0;background:#14141499;backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}
+    .modal-backdrop.open{display:flex}
+    .modal{background:var(--paper);width:min(440px,100%);border-radius:26px;padding:34px;position:relative;text-align:center;box-shadow:0 25px 90px #0004;animation:pop .22s ease-out}
+    @keyframes pop{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+    .close{position:absolute;left:17px;top:15px;border:0;background:#ebe6df;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer}
+    .modal-symbol{width:58px;height:58px;border-radius:19px;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:30px;margin:5px auto 18px}
+    .modal h3{font-size:27px;margin:0 0 12px}
+    .modal p{color:var(--muted);font-size:14px;line-height:2.1;margin:0 0 18px}
+    .handle{direction:ltr;color:var(--orange);font-size:19px;font-weight:800;margin:0 0 22px}
+    .modal .btn{width:100%;margin-top:10px}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:60px 0 55px;gap:20px}.hero-copy{text-align:center}.intro{margin:auto}.eyebrow{justify-content:center}h1{letter-spacing:-4px}.actions{justify-content:center}.art{height:360px}.orb{width:290px}.glyph{font-size:140px}.orbit{width:350px;height:160px}.orbit.two{width:340px}.section-head{display:block}.section-desc{margin-top:14px}.cards{grid-template-columns:1fr}.quote{padding:30px;display:block}.quote-mark{margin-top:35px}.social{grid-template-columns:1fr}section{padding:75px 0}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home" aria-label="ریتم، صفحه اصلی"><span class="mark">ر</span><span>ریتم</span></a>
+    <nav class="navlinks" aria-label="ناوبری">
+      <a href="#about">درباره ریتم</a><a href="#activities">مسیر ما</a><a href="#social">ارتباط با ما</a>
+    </nav>
+    <button class="btn nav-cta" onclick="openModal()">عضویت در انجمن <span>↗</span></button>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">انجمن علمی گرافیک</div>
+        <h1>ریتم<span>.</span></h1>
+        <p class="tagline">اینجا، ایده‌ها شکل می‌گیرن.</p>
+        <p class="intro">جایی برای دیدن، ساختن و روایت کردن؛ برای تجربه‌های تازه، گفت‌وگوهای خلاقانه و کنار هم ساختن دنیای گرافیک.</p>
+        <div class="actions">
+          <button class="btn btn-primary" onclick="openModal()">درخواست عضویت <span>↗</span></button>
+          <a class="btn btn-outline" href="https://www.instagram.com/graphic.alzahramashhad/" target="_blank" rel="noopener">ما را در اینستاگرام ببین</a>
+        </div>
+      </div>
+      <div class="art" aria-label="نشان گرافیکی ریتم">
+        <div class="orbit"></div><div class="orbit two"></div>
+        <div class="orb"><div class="glyph">ر</div></div>
+        <div class="sticker"><b>RITM / 01</b>ایده، حرکت، تجربه</div>
+      </div>
+    </div>
+
+    <div class="ticker"><div class="wrap ticker-track"><div>SEE <span>✳</span> MAKE</div><div>THINK <span>✳</span> SHARE</div><div>IDEAS IN MOTION <span>✳</span> RITM</div></div></div>
+
+    <section class="wrap" id="about">
+      <div class="section-head">
+        <div><div class="kicker">01 / ABOUT US</div><h2>گرافیک، فراتر از<br>یک قاب ثابت.</h2></div>
+        <p class="section-desc">ریتم بستری برای رشد، تجربه و ارتباط میان علاقه‌مندان گرافیک است؛ جایی که هر نگاه می‌تواند شروع یک ایده تازه باشد.</p>
+      </div>
+      <div class="quote"><strong>ما اینجاییم تا ایده‌ها را از ذهن بیرون بیاوریم و به چیزی دیدنی، شنیدنی و ماندگار تبدیل کنیم.</strong><div class="quote-mark">“</div></div>
+    </section>
+
+    <section class="wrap" id="activities">
+      <div class="section-head">
+        <div><div class="kicker">02 / WHAT WE DO</div><h2>در مسیر خلاقیت</h2></div>
+        <p class="section-desc">از اولین جرقه تا ارائه نهایی؛ با هم یاد می‌گیریم، می‌سازیم و تجربه می‌کنیم.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-num">01 — EXPLORE</div><h3>دیدن و کشف کردن</h3><p>آشنایی با جریان‌های طراحی، بررسی آثار و پیدا کردن زاویه‌های تازه برای نگاه کردن.</p></article>
+        <article class="card"><div class="card-num">02 — CREATE</div><h3>ساختن و تجربه کردن</h3><p>کارگاه‌ها، تمرین‌های گروهی و تجربه مسیرهای متنوع در دنیای ارتباط تصویری.</p></article>
+        <article class="card"><div class="card-num">03 — CONNECT</div><h3>روایت و ارتباط</h3><p>به اشتراک گذاشتن ایده‌ها، گفت‌وگو با هنرمندان و ساختن یک جامعه خلاق.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="social">
+      <div class="section-head">
+        <div><div class="kicker">03 / FIND YOUR RHYTHM</div><h2>همراه ریتم باش</h2></div>
+        <p class="section-desc">برای دنبال کردن خبرها، برنامه‌ها و اتفاق‌های انجمن از راه‌های ارتباطی ما استفاده کن.</p>
+      </div>
+      <div class="social">
+        <a class="social-card" href="https://www.instagram.com/graphic.alzahramashhad/" target="_blank" rel="noopener"><div><strong>اینستاگرام</strong><small>@graphic.alzahramashhad</small></div><div class="social-icon">◎</div></a>
+        <a class="social-card" href="https://t.me/Ritm_graphic" target="_blank" rel="noopener"><div><strong>کانال تلگرام</strong><small>@Ritm_graphic</small></div><div class="social-icon">↗</div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© ریتم — انجمن علمی گرافیک</span><span>اینجا، ایده‌ها شکل می‌گیرن. <b style="color:var(--orange)">✳</b></span></footer>
+
+  <div class="modal-backdrop" id="membershipModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="backdropClose(event)">
+    <div class="modal">
+      <button class="close" aria-label="بستن" onclick="closeModal()">×</button>
+      <div class="modal-symbol">✳</div>
+      <h3 id="modalTitle">به ریتم بپیوند!</h3>
+      <p>برای ثبت‌نام و عضویت در انجمن علمی گرافیک ریتم، از طریق تلگرام به دبیر انجمن پیام بده.</p>
+      <div class="handle">@NonaFereydouni</div>
+      <a class="btn btn-primary" href="https://t.me/NonaFereydouni" target="_blank" rel="noopener">پیام به دبیر در تلگرام ↗</a>
+      <button class="btn btn-outline" onclick="copyHandle()">کپی آیدی تلگرام</button>
+    </div>
+  </div>
+  <script>
+    const modal=document.getElementById('membershipModal');
+    function openModal(){modal.classList.add('open');document.body.style.overflow='hidden';}
+    function closeModal(){modal.classList.remove('open');document.body.style.overflow='';}
+    function backdropClose(e){if(e.target===modal)closeModal();}
+    function copyHandle(){
+      const value='@NonaFereydouni';
+      if(navigator.clipboard && window.isSecureContext){navigator.clipboard.writeText(value).then(()=>alert('آیدی تلگرام کپی شد.')).catch(()=>fallbackCopy(value));}
+      else fallbackCopy(value);
+    }
+    function fallbackCopy(value){
+      const el=document.createElement('textarea');el.value=value;document.body.appendChild(el);el.select();
+      try{document.execCommand('copy');alert('آیدی تلگرام کپی شد.')}catch(e){alert(value)}
+      el.remove();
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  </script>
+</body>
+</html>
